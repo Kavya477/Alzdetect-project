@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload MRI</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+background:#adc8eb;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+/* Main container */
+
+.container{
+background:white;
+padding:35px;
+width:550px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+
+h2{
+text-align:center;
+color:#2c3e50;
+margin-bottom:25px;
+}
+
+/* Form layout */
+
+form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+/* Labels */
+
+label{
+font-size:14px;
+font-weight:600;
+color:#555;
+}
+
+/* Inputs */
+
+input{
+width:100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+transition:0.2s;
+}
+
+input:focus{
+border-color:#3498db;
+outline:none;
+box-shadow:0 0 5px rgba(52,152,219,0.3);
+}
+
+/* File input takes full width */
+
+.file-upload{
+grid-column:span 2;
+}
+
+/* Button */
+
+button{
+grid-column:span 2;
+padding:12px;
+background:#3498db;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#2980b9;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+<div style="text-align:right;">
+<a href="/logout" style="color:rgb(0, 51, 255);">Logout</a>
+</div>
+
+<h2>🧠 AlzDetect</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    
+
+<div>
+<label>Patient Age</label>
+<input type="number" name="age" required>
+</div>
+
+<div>
+<label>Education Years</label>
+<input type="number" name="educ" required>
+</div>
+
+<div>
+<label>MMSE Score</label>
+<input type="number" name="mmse" required>
+</div>
+
+<div>
+<label>SES</label>
+<input type="number" name="ses" required>
+</div>
+
+<div>
+<label>eTIV</label>
+<input type="number" step="any" name="etiv" required>
+</div>
+
+<div>
+<label>nWBV</label>
+<input type="number" step="any" name="nwbv" required>
+</div>
+
+<div>
+<label>ASF</label>
+<input type="number" step="any" name="asf" required>
+</div>
+
+<div class="file-upload">
+<label>Upload MRI Brain Scan</label>
+<input type="file" name="mri" required>
+</div>
+
+<button type="submit">Analyze MRI</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

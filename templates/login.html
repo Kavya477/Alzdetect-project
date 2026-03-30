@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Alzheimer Detection System</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+}
+
+/* LEFT SIDE (PROJECT INFO) */
+
+.left{
+width:50%;
+background:linear-gradient(#adc8eb,#adc8eb);
+/* background:linear-gradient(135deg,#3a7bd5,#00d2ff); */
+/* background:#adc8eb; */
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:60px;
+text-align:center;
+}
+
+.left h1{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.left p{
+font-size:18px;
+line-height:1.6;
+max-width:450px;
+}
+
+/* RIGHT SIDE (LOGIN) */
+
+.right{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f4f7fb;
+}
+
+.login-box{
+background:white;
+padding:40px;
+width:350px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.login-box h2{
+text-align:center;
+margin-bottom:25px;
+color:#333;
+}
+
+label{
+font-size:14px;
+color:#555;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#3a7bd5;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#2c5fb2;
+}
+
+.error{
+color:red;
+text-align:center;
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="left">
+
+<h1>🧠 AlzDetect</h1>
+
+<p>
+This system uses Machine Learning to assist in detecting
+possible Alzheimer patterns using patient data and MRI scans.
+<br><br>
+Login to access the prediction dashboard and upload patient information.
+</p>
+
+</div>
+
+
+<div class="right">
+
+<div class="login-box">
+
+<h2>Login</h2>
+
+<form method="POST">
+
+<label>Username</label>
+<input type="text" name="username" required>
+
+<label>Password</label>
+<input type="password" name="password" required>
+
+<button type="submit">Login</button>
+<p style="text-align:center; margin-top:10px;">
+<a href="/register">Not registered? Create account</a>
+</p>
+</form>
+
+
+<p class="error">{{error}}</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

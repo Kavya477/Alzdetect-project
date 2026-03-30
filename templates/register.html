@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register - AlzDetect</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+}
+
+.left{
+width:50%;
+background:#adc8eb;
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:60px;
+text-align:center;
+}
+
+.left h1{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.right{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#f4f7fb;
+}
+
+.box{
+background:white;
+padding:40px;
+width:350px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.box h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#3a7bd5;
+border:none;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+a{
+display:block;
+margin-top:10px;
+text-align:center;
+color:#3a7bd5;
+text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="left">
+<h1>🧠 AlzDetect</h1>
+<p>Create your account to access the system</p>
+</div>
+
+<div class="right">
+<div class="box">
+
+<h2>Register</h2>
+
+<form method="POST">
+<input type="text" name="username" placeholder="Username" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Register</button>
+</form>
+
+<a href="/">Already have an account? Login</a>
+
+</div>
+</div>
+
+</body>
+</html>

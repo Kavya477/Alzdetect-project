@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diagnosis Result</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+/* background:linear-gradient(135deg,#667eea,#764ba2);/ */
+background:#adc8eb;
+}
+
+/* Result Card */
+
+.container{
+background:white;
+padding:40px;
+border-radius:12px;
+width:450px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+h2{
+margin-bottom:20px;
+color:#333;
+}
+
+/* MRI Image */
+
+img{
+width:280px;
+border-radius:8px;
+margin:20px 0;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Result Text */
+
+.result{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+color:#444;
+}
+
+.score{
+font-size:18px;
+margin-top:10px;
+color:#666;
+}
+
+/* Button */
+
+a{
+display:inline-block;
+margin-top:25px;
+padding:12px 20px;
+background:#667eea;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+transition:0.3s;
+}
+
+a:hover{
+background:#4c63d2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div style="text-align:right;">
+<a href="/logout" style="color:rgb(0, 5, 255);">Logout</a>
+</div>
+
+<h2>🧠 Diagnosis Result</h2>
+
+<img src="{{image}}" alt="MRI Scan">
+
+
+<div class="result">
+Prediction : {{result}}
+</div>
+
+<div class="score">
+Confidence Score : {{score}}%
+</div>
+
+<a href="/upload">Analyze Another MRI</a>
+
+</div>
+
+</body>
+</html>
